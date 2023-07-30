@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hwh.restaurant.mapper.FootMapper">
-
+    <resultMap id="footMap" type="com.hwh.restaurant.po.Foot">
+        <id column="id" property="id"/>
+        <result column="foot_id" property="footId"/>
+        <result column="foot_name" property="footName"/>
+        <result column="foot_price" property="footPrice"/>
+        <result column="foot_type_id" property="footTypeId"/>
+        <result column="foot_cover" property="footCover"/>
+        <result column="foot_described" property="footDescribed"/>
+        <result column="sort" property="sort"/>
+        <result column="is_sale" property="sale"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+    
+    <!--List<Foot> listFoot();-->
+    <select id="listFoot" resultMap="footMap">
+        SELECT id,foot_id,foot_name,foot_price,foot_type_id,foot_cover,foot_described,sort,is_sale,create_time,update_time
+        FROM restaurant_foot
+        WHERE is_sale = 1
+    </select>
 </mapper>

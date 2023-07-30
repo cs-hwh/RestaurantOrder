@@ -20,10 +20,7 @@ import javax.annotation.Resource;
 @RequestMapping("/restaurant/foot")
 public class FootController {
 
-    @ApiOperation(tags = {"foot"},value = "查询首页菜单",notes = "查询首页菜单，包含分类和各分类下的菜品")
-    @GetMapping("/menu")
-    public Result queryMenu(){
-        return Result.ok();
-    }
+
+
 
 }

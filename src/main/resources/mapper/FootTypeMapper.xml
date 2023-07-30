@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hwh.restaurant.mapper.FootTypeMapper">
-
+    <resultMap id="footType" type="com.hwh.restaurant.po.FootType">
+        <id column="id" property="id"/>
+        <result column="foot_type_id" property="footTypeId"/>
+        <result column="foot_type_name" property="footTypeName"/>
+        <result column="sort" property="sort"/>
+        <result column="is_enabled" property="enabled"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+    <select id="listFootType" resultMap="footType">
+        SELECT id,foot_type_id,foot_type_name,sort,is_enabled,create_time,update_time
+        FROM restaurant_foot_type
+        WHERE is_enabled = 1
+    </select>
 </mapper>
