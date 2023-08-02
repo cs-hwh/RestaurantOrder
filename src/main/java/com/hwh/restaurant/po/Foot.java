@@ -46,7 +46,11 @@ public class Foot implements Serializable {
     @ApiModelProperty("排序")
     private Integer sort;
 
-    @ApiModelProperty("是否上架：0下架，上架")
+    @ApiModelProperty("是否存在可选项：0存在，1不存在")
+    @TableField("is_exist_option")
+    private Integer existOption;
+
+    @ApiModelProperty("是否上架：0下架，1上架")
     @TableField("is_sale")
     private Integer sale;
 
@@ -136,20 +140,29 @@ public class Foot implements Serializable {
         this.updateTime = updateTime;
     }
 
+    public Integer getExistOption() {
+        return existOption;
+    }
+
+    public void setExistOption(Integer existOption) {
+        this.existOption = existOption;
+    }
+
     @Override
     public String toString() {
         return "Foot{" +
-            "id=" + id +
-            ", footId=" + footId +
-            ", footName=" + footName +
-            ", footPrice=" + footPrice +
-            ", footTypeId=" + footTypeId +
-            ", footCover=" + footCover +
-            ", footDescribed=" + footDescribed +
-            ", sort=" + sort +
-            ", sale=" + sale +
-            ", createTime=" + createTime +
-            ", updateTime=" + updateTime +
-        "}";
+                "id=" + id +
+                ", footId='" + footId + '\'' +
+                ", footName='" + footName + '\'' +
+                ", footPrice=" + footPrice +
+                ", footTypeId='" + footTypeId + '\'' +
+                ", footCover='" + footCover + '\'' +
+                ", footDescribed='" + footDescribed + '\'' +
+                ", sort=" + sort +
+                ", existOption=" + existOption +
+                ", sale=" + sale +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
     }
 }

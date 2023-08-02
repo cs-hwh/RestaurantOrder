@@ -15,9 +15,9 @@ import io.swagger.annotations.ApiModelProperty;
  * @author hwh
  * @since 2023-07-29
  */
-@TableName("restaurant_foot_property")
-@ApiModel(value = "FootProperty对象", description = "")
-public class FootProperty implements Serializable {
+@TableName("restaurant_foot_Option")
+@ApiModel(value = "FootOption对象", description = "")
+public class FootOption implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -25,16 +25,16 @@ public class FootProperty implements Serializable {
     private Long id;
 
     @ApiModelProperty("属性ID")
-    private String footPropertyId;
+    private String footOptionId;
 
     @ApiModelProperty("所属菜品ID")
     private String footId;
 
     @ApiModelProperty("属性名")
-    private String footPropertyName;
+    private String footOptionName;
 
     @ApiModelProperty("属性值")
-    private String footPropertyValue;
+    private String footOptionValue;
 
     @ApiModelProperty("排序")
     private Integer sort;
@@ -56,12 +56,12 @@ public class FootProperty implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getFootPropertyId() {
-        return footPropertyId;
+    public String getFootOptionId() {
+        return footOptionId;
     }
 
-    public void setFootPropertyId(String footPropertyId) {
-        this.footPropertyId = footPropertyId;
+    public void setFootOptionId(String footOptionId) {
+        this.footOptionId = footOptionId;
     }
     public String getFootId() {
         return footId;
@@ -70,19 +70,19 @@ public class FootProperty implements Serializable {
     public void setFootId(String footId) {
         this.footId = footId;
     }
-    public String getFootPropertyName() {
-        return footPropertyName;
+    public String getFootOptionName() {
+        return footOptionName;
     }
 
-    public void setFootPropertyName(String footPropertyName) {
-        this.footPropertyName = footPropertyName;
+    public void setFootOptionName(String footOptionName) {
+        this.footOptionName = footOptionName;
     }
-    public String getFootPropertyValue() {
-        return footPropertyValue;
+    public String getFootOptionValue() {
+        return footOptionValue;
     }
 
-    public void setFootPropertyValue(String footPropertyValue) {
-        this.footPropertyValue = footPropertyValue;
+    public void setFootOptionValue(String footOptionValue) {
+        this.footOptionValue = footOptionValue;
     }
     public Integer getSort() {
         return sort;
@@ -115,16 +115,16 @@ public class FootProperty implements Serializable {
 
     @Override
     public String toString() {
-        return "FootProperty{" +
-            "id=" + id +
-            ", footPropertyId=" + footPropertyId +
-            ", footId=" + footId +
-            ", footPropertyName=" + footPropertyName +
-            ", footPropertyValue=" + footPropertyValue +
-            ", sort=" + sort +
-            ", enabled=" + enabled +
-            ", createTime=" + createTime +
-            ", updateTime=" + updateTime +
-        "}";
+        return "FootOption{" +
+                "id=" + id +
+                ", footOptionId='" + footOptionId + '\'' +
+                ", footId='" + footId + '\'' +
+                ", footOptionName='" + footOptionName + '\'' +
+                ", footOptionValue='" + footOptionValue + '\'' +
+                ", sort=" + sort +
+                ", enabled=" + enabled +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
     }
 }

@@ -23,10 +23,11 @@ public class MenuFoot {
 
     private Integer sort;
 
+    private Integer existOption;
     public MenuFoot() {
     }
 
-    public MenuFoot(String footId, String footName, BigDecimal footPrice, String footTypeId, String footCover, String footDescribed, Integer sort) {
+    public MenuFoot(String footId, String footName, BigDecimal footPrice, String footTypeId, String footCover, String footDescribed, Integer sort, Integer existOption) {
         this.footId = footId;
         this.footName = footName;
         this.footPrice = footPrice;
@@ -34,6 +35,7 @@ public class MenuFoot {
         this.footCover = footCover;
         this.footDescribed = footDescribed;
         this.sort = sort;
+        this.existOption = existOption;
     }
 
     public String getFootId() {
@@ -92,6 +94,14 @@ public class MenuFoot {
         this.sort = sort;
     }
 
+    public Integer getExistOption() {
+        return existOption;
+    }
+
+    public void setExistOption(Integer existOption) {
+        this.existOption = existOption;
+    }
+
     @Override
     public String toString() {
         return "MenuFoot{" +
@@ -102,6 +112,7 @@ public class MenuFoot {
                 ", footCover='" + footCover + '\'' +
                 ", footDescribed='" + footDescribed + '\'' +
                 ", sort=" + sort +
+                ", existOption=" + existOption +
                 '}';
     }
 }

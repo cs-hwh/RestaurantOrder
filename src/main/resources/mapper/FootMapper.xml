@@ -11,13 +11,14 @@
         <result column="foot_described" property="footDescribed"/>
         <result column="sort" property="sort"/>
         <result column="is_sale" property="sale"/>
+        <result column="is_exist_option" property="existOption"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
     
     <!--List<Foot> listFoot();-->
     <select id="listFoot" resultMap="footMap">
-        SELECT id,foot_id,foot_name,foot_price,foot_type_id,foot_cover,foot_described,sort,is_sale,create_time,update_time
+        SELECT id,foot_id,foot_name,foot_price,foot_type_id,foot_cover,foot_described,sort,is_sale,is_exist_option,create_time,update_time
         FROM restaurant_foot
         WHERE is_sale = 1
     </select>
