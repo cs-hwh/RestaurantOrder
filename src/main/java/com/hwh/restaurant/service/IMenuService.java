@@ -12,5 +12,5 @@ public interface IMenuService {
      * 查询菜单
      * @return
      */
-    Menu getMenu();
+    Menu getFootMenu();
 }

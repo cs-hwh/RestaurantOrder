@@ -27,8 +27,8 @@ public class MenuController {
 
     @ApiOperation(tags = {"menu"}, value = "查询首页菜单", notes = "查询首页菜单，包含分类和各分类下的菜品")
     @GetMapping("/")
-    public Result getMenu() {
-        Menu menuList = menuService.getMenu();
+    public Result getFootMenu() {
+        Menu menuList = menuService.getFootMenu();
         return Result.ok().data("menu", menuList);
     }
 

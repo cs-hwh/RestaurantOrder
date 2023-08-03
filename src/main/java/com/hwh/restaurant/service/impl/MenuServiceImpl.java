@@ -37,7 +37,7 @@ public class MenuServiceImpl implements IMenuService {
 
 
     @Override
-    public Menu getMenu() {
+    public Menu getFootMenu() {
         Menu menu =null;
 
         List<MenuFootType> menuFootTypeList = null;
